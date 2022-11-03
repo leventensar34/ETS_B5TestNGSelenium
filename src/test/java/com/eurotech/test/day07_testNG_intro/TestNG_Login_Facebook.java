@@ -14,7 +14,7 @@ public class TestNG_Login_Facebook {
 
 WebDriver driver;
     @Test
-    public void pozitifLiginTest() {
+    public void pozitifLoginTest() {
 
         driver.get("https://www.facebook.com");
 

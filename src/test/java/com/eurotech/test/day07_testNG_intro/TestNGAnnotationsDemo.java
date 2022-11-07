@@ -46,6 +46,36 @@ public class TestNGAnnotationsDemo {
 
         Assert.assertTrue(email.contains("@"));
     }
+
+    @Test
+    public void test5(){
+        Assert.assertFalse(0<1,"verify that 0 is not greater than 1");
+
+        // true --> actual (condition)
+        // false --> expected (assertion)
+        // test result FAILED
+
+        Assert.assertFalse(0>1,"verify that 0 is not greater than 1");
+
+        // false --> actual (condition)
+        // true--> expected (assertion)
+        // test result PASS
+    }
+
+    @Test
+    public void test6(){
+
+        Assert.assertNotEquals("two","two");
+        // expected:false
+        // actual : true
+        //test : FAILED
+
+        Assert.assertNotEquals("two","one");
+
+        // expected:false
+        // actual : false
+        //test : PASS
+    }
     @Test
     public  void test2(){
 

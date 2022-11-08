@@ -10,7 +10,7 @@ import org.testng.annotations.Test;
 public class Task1 {
 
     @Test
-    public void test1() {
+    public void test1() throws InterruptedException {
 
 
         // Class Task
@@ -21,6 +21,7 @@ public class Task1 {
 
         WebDriver driver = WebDriverFactory.getDriver("chrome");
         driver.get("https://demoqa.com/automation-practice-form");
+        driver.manage().window().maximize();
 
         WebElement sports = driver.findElement(By.xpath("//label[@for='hobbies-checkbox-1']"));
 
@@ -33,10 +34,12 @@ public class Task1 {
         System.out.println("sports.isSelected() = " + sports.isSelected());
         Assert.assertFalse(sports.isSelected()); // assert: false, condition: false, test: PASS
 
+        Thread.sleep(2000);
         reading.click();
         System.out.println("reading.isSelected() = " + reading.isSelected());
         Assert.assertFalse(reading.isSelected()); // assert: false, condition: false, test: PASS
 
+        Thread.sleep(2000);
         music.click();
         System.out.println("music.isSelected() = " + music.isSelected());
         Assert.assertFalse(music.isSelected()); // assert: false, condition: false, test: PASS

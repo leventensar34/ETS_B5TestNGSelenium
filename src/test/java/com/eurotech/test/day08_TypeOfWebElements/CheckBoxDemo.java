@@ -56,18 +56,6 @@ public class CheckBoxDemo {
         Assert.assertFalse(music.isSelected()); //assert:false  condition:false  test:Pass
 
 
-
-
-
-
-
-
-
-
-
-
-
-
         driver.close();
     }
 }

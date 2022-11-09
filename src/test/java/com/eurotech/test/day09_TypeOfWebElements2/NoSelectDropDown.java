@@ -37,6 +37,16 @@ public class NoSelectDropDown {
         System.out.println("papayaList.size() = " + papayaList.size());
         Assert.assertEquals(papayaList.size(),5);
 
+        for (WebElement papaya : papayaList) {
+            System.out.println("papaya.getText() = " + papaya.getText());
+        }
+
+       Assert.assertEquals(papayaList.get(3).getText(),"Nuts");
+
+        papayaList.get(2).click();
+
+        Thread.sleep(2000);
+
        // Task
        // index and click
 

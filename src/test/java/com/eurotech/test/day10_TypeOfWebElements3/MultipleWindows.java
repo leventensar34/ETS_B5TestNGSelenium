@@ -28,7 +28,7 @@ public class MultipleWindows {
 
         Thread.sleep(2000);
         // driver.close();
-        driver.quit();
+       // driver.quit();
     }
 
 
@@ -52,7 +52,7 @@ public class MultipleWindows {
 
         Set<String> windowsHandle = driver.getWindowHandles();
         // first and most important thing;
-        // HashSet is a collection of an items whwere every item is uniq!!!
+        // HashSet is a collection of an items where every Item is uniq!!!
 
         for (String tab : windowsHandle) {
             if (!tab.equals(currentTab)) {

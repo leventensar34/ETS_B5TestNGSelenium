@@ -32,6 +32,8 @@ public class PopUpAndAlerts {
     @Test
     public void test1() throws InterruptedException {
 
+        // HTML yöntemi ile cözülen alertler
+
         driver.get("https://www.primefaces.org/showcase/ui/overlay/confirmDialog.xhtml?jfwid=b656a");
 
         //
@@ -53,6 +55,8 @@ public class PopUpAndAlerts {
 
     @Test
     public void jsAlerts() throws InterruptedException {
+
+        //Alert sinifindan metodlarla cözulen alertler.
 
         driver.get("https://the-internet.herokuapp.com/javascript_alerts");
 

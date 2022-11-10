@@ -11,7 +11,6 @@ import org.testng.annotations.Test;
 public class IframeTest {
 
 
-
     WebDriver driver;
 
     @BeforeMethod
@@ -25,7 +24,7 @@ public class IframeTest {
 
         Thread.sleep(2000);
         // driver.close();
-        driver.quit();
+         driver.quit();
     }
 
     @Test
@@ -37,14 +36,13 @@ public class IframeTest {
         //First way : using name or ID
         driver.switchTo().frame("mce_0_ifr");
 
-       WebElement textArea= driver.findElement(By.cssSelector("#tinymce"));
-       textArea.clear();
-       textArea.sendKeys("Eurotech Batch 5 was here");
+        WebElement textArea = driver.findElement(By.cssSelector("#tinymce"));
+        textArea.clear();
+        textArea.sendKeys("Eurotech Batch 5 was here");
 
 
         driver.switchTo().parentFrame();
-       //***** Second way : switching index
-
+        //***** Second way : switching index
 
 
         driver.switchTo().frame(0);
@@ -54,12 +52,10 @@ public class IframeTest {
         driver.switchTo().parentFrame();
         //**** Third way: using web element
 
-        WebElement iframe=driver.findElement(By.tagName("iframe"));
+        WebElement iframe = driver.findElement(By.tagName("iframe"));
         driver.switchTo().frame(iframe);
         textArea.clear();
         textArea.sendKeys("This is third way");
-
-
 
 
     }
@@ -69,7 +65,7 @@ public class IframeTest {
 
         driver.get("https://the-internet.herokuapp.com/nested_frames");
 
-        //switch to middle frame and gett middle text
+        //switch to middle frame and get middle text
         driver.switchTo().frame("frame-top");
 
         driver.switchTo().frame("frame-middle");
@@ -86,9 +82,18 @@ public class IframeTest {
         System.out.println("driver.findElement(By.tagName(\"body\")).getText() = " + driver.findElement(By.tagName("body")).getText());
 
 
-        // go to bottom frame and get text
-
         // go to left frame and get text
+        driver.switchTo().parentFrame();
+        driver.switchTo().frame(0);
+        System.out.println("driver.findElement(By.name(\"frame-left\")).getText() = " + driver.findElement(By.tagName("body")).getText());
+
+
+        // go to bottom frame and get text
+        driver.switchTo().parentFrame();
+        driver.switchTo().parentFrame();
+        driver.switchTo().frame("frame-bottom");
+        System.out.println("driver.findElement(By.tagName(\"body\")).getText() = " + driver.findElement(By.tagName("body")).getText());
+
 
     }
 }

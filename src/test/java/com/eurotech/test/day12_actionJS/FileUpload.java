@@ -52,6 +52,8 @@ public class FileUpload {
     public void fileUploadTest2() {
 
         System.out.println("System.getProperty(\"user.dir\") = " + System.getProperty("user.dir"));
+//        System.out.println("System.getProperty(\"os.name\") = " + System.getProperty("os.name"));
+//        System.out.println("System.getenv(\"Path\") = " + System.getenv("Path"));
 
         driver.get("https://the-internet.herokuapp.com/upload");
 

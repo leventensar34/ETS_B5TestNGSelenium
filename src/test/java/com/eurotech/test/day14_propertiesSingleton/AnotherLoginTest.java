@@ -13,7 +13,7 @@ public class AnotherLoginTest extends TestBase {
     @Test
     public void test() {
 
-        driver.get(ConfigurationReader.get("url"));
+        driver.get(ConfigurationReader.get("url"));   //http://eurotech.study/login
         WebElement usernameInput=driver.findElement(By.id("loginpage-input-email"));
         WebElement passwordInput=driver.findElement(By.id("loginpage-form-pw-input"));
 

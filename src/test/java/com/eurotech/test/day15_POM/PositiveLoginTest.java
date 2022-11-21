@@ -2,7 +2,10 @@ package com.eurotech.test.day15_POM;
 
 import com.eurotech.pages.LoginPage;
 import com.eurotech.test.TestBase;
+import com.eurotech.utilities.BrowserUtils;
 import com.eurotech.utilities.ConfigurationReader;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -49,5 +52,15 @@ public class PositiveLoginTest extends TestBase {
 
         Assert.assertEquals(loginPage.productsText.getText(),"PRODUCTS");
 
+    }
+
+    @Test
+    public void hoverTest() {
+
+        driver.get("https://the-internet.herokuapp.com/hovers");
+
+        WebElement img3=driver.findElement(By.xpath("(//img)[3]"));
+
+        BrowserUtils.hover(img3);
     }
 }

@@ -29,15 +29,27 @@ public class DashboardPage extends BasePage {
     @FindBy(css = "#post-form-btn")
     public WebElement submitBtn_loc;
 
+    @FindBy(css = "#loginpage-h1")
+    public WebElement signText;
 
-    public void navigateToMenu(String menuName){
-        Driver.get().findElement(By.xpath("//*[text()='"+menuName+"']")).click();
+    @FindBy(css = "#dashboard-experience-h1")
+    public WebElement credentialMessage;
+
+
+    public void navigateToMenu(String menuName) {
+        Driver.get().findElement(By.xpath("//*[text()='" + menuName + "']")).click();
 
     }
 
-    public void navigateToSubMenu(String subMenu){
-        Driver.get(). findElement(By.xpath("//span[text()='"+subMenu+"']")).click();
+    public void navigateToSubMenu(String subMenu) {
+        Driver.get().findElement(By.xpath("//span[text()='" + subMenu + "']")).click();
 
+
+    }
+
+    public void navigateAll(String tab, String modul) {
+        Driver.get().findElement(By.xpath("//*[text()='" + tab + "']")).click();
+        Driver.get().findElement(By.xpath("//span[text()='" + modul + "']")).click();
 
     }
 

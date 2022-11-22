@@ -4,6 +4,7 @@ import com.eurotech.pages.DashboardPage;
 import com.eurotech.pages.LoginPage;
 import com.eurotech.test.TestBase;
 import com.eurotech.utilities.ConfigurationReader;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -86,6 +87,16 @@ public class DashboardTest extends TestBase {
         Assert.assertEquals(driver.getCurrentUrl(),"http://eurotech.study/profiles");
         dashboardPage.navigateToMenu("All Posts");
         Assert.assertEquals(driver.getCurrentUrl(),"http://eurotech.study/posts");
+
+
+    }
+
+    @Test
+    public void test1() {
+
+        driver.get("https://www.amazon.co.uk");
+
+        driver.findElement(By.id("sp-cc-accept")).click();
 
 
     }

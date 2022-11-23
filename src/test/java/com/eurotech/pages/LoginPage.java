@@ -22,8 +22,8 @@ public class LoginPage extends BasePage {
     @FindBy(xpath = "//input[@type='submit']")
     public WebElement loginBtn_loc;
 
-    @FindBy(xpath = "//*[.='Invalid Credentials!'")
-    public WebElement errorMessage_loc;
+    @FindBy(xpath = "//*[.='Invalid Credentials!']")
+    public WebElement warningMessage_loc;
 
     @FindBy(css = ".menu-list")
     public List<WebElement> menuList_loc;

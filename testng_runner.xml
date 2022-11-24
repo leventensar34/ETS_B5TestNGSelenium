@@ -1,0 +1,50 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<!-- How to run each packages?
+<suite name="Eurotech Automation" verbose="1">
+    <test name="Eurotech Smoke Test">
+        <packages>
+            <package name="com.eurotech.test.day12_actionJS"></package>
+            <package name="com.eurotech.test.day19_review"></package>
+        </packages>
+    </test>
+</suite>
+-->
+<!-- How to run spesific Automation
+<suite name="Eurotech Automation" verbose="1">
+    <test name="Eurotech Smoke Test">
+        <classes>
+           <class name="com.eurotech.test.day19_review.VerifyUserInfo"></class>
+            <class name="com.eurotech.test.day15_POM.PositiveLoginTest"></class>
+        </classes>
+    </test>
+</suite>
+ -->
+
+ <!-- How to run all tests cases in one class without one 
+<suite name="Eurotech Automation" verbose="1">
+    <test name="Eurotech Smoke Test">
+        <classes>
+          <class name="com.eurotech.test.day15_POM.PositiveLoginTest">
+              <methods>
+                  <include name="login"></include>
+                  <include name="loginAsPerform"></include>
+              </methods>
+          </class>
+            
+        </classes>
+    </test>
+</suite>
+ -->
+<suite name="Eurotech Automation" verbose="1">
+<test name="Eurotech Smoke Test">
+    <classes>
+        <class name="com.eurotech.test.day15_POM.PositiveLoginTest">
+            <methods>
+               <exclude name="hoverTest"></exclude>
+                <exclude name="loginAsProblemMethod"></exclude>
+            </methods>
+        </class>
+
+    </classes>
+</test>
+</suite>

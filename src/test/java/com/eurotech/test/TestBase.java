@@ -68,7 +68,7 @@ public class TestBase {
         actions = new Actions(driver);
         wait = new WebDriverWait(Driver.get(), 15);
 
-        driver.get(ConfigurationReader.get("url"));
+        driver.get(ConfigurationReader.get("urlToolsQA"));
     }
 
     @AfterMethod
@@ -87,7 +87,7 @@ public class TestBase {
 
         }
         Thread.sleep(2000);
-        driver.close();
+       // driver.close();
 
     }
 

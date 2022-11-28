@@ -1,4 +1,4 @@
-package com.eurotech.test.day30_Grup;
+package com.eurotech.test.day40_Grup;
 
 import com.eurotech.test.TestBase;
 import org.openqa.selenium.By;
@@ -8,11 +8,11 @@ import org.testng.annotations.Test;
 
 import java.util.List;
 
-public class DemoqaDatePakers extends TestBase {
+public class DemoqaDatePickers extends TestBase {
 
 
     @Test
-    public void datePakers() {
+    public void datePickers() {
 
         driver.findElement(By.cssSelector("#datePickerMonthYearInput")).click();
 

@@ -19,6 +19,7 @@ public class TestBase {
 
     protected WebDriver driver;
     protected Actions actions;
+
     protected WebDriverWait wait;
     //add for extentReport
     protected ExtentReports report;
@@ -68,7 +69,9 @@ public class TestBase {
         actions = new Actions(driver);
         wait = new WebDriverWait(Driver.get(), 15);
 
-        driver.get(ConfigurationReader.get("urlToolsQA1"));
+       // driver.get(ConfigurationReader.get("urlToolsQA1"));
+        driver.get(ConfigurationReader.get("url"));
+
     }
 
     @AfterMethod
@@ -88,7 +91,7 @@ public class TestBase {
         }
         Thread.sleep(2000);
        // driver.close();
-
+      //  Driver.closeDriver();
     }
 
 }

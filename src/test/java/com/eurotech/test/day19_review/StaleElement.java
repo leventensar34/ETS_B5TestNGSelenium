@@ -1,6 +1,7 @@
 package com.eurotech.test.day19_review;
 
 import com.eurotech.test.TestBase;
+import com.eurotech.utilities.BrowserUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebElement;

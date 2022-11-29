@@ -13,7 +13,7 @@ public class DDFLoginTest extends TestBase {
     @DataProvider
     public Object[][] userData() {
         //path of Excel and sheet name
-        ExcelUtil testData = new ExcelUtil("src/test/resources/EurotechTestB5.xlsx.xlsx", "Tabelle1");
+        ExcelUtil testData = new ExcelUtil("src/test/resources/Mappe1.xlsx", "Tabelle1");
 
         return testData.getDataArrayWithoutFirstRow();
     }

@@ -69,20 +69,20 @@ public class TestBase {
         actions = new Actions(driver);
         wait = new WebDriverWait(Driver.get(), 15);
 
-       // driver.get(ConfigurationReader.get("urlToolsQA1"));
-        driver.get(ConfigurationReader.get("url"));
-
+        // driver.get(ConfigurationReader.get("urlToolsQA1"));
+        // driver.get(ConfigurationReader.get("url"));
+        driver.get("https://www.saucedemo.com/");
     }
 
     @AfterMethod
     public void tearDown(ITestResult result) throws InterruptedException, IOException {
         // if the test failes
-        if (result.getStatus()==ITestResult.FAILURE){
+        if (result.getStatus() == ITestResult.FAILURE) {
 
             // Record the name of failed test
             extentLogger.fail(result.getName());
             //take the screenshot and return the location of screenshot
-            String screenShotPath= BrowserUtils.getScreenshot(result.getName());
+            String screenShotPath = BrowserUtils.getScreenshot(result.getName());
             // Add the screenshot to the report
             extentLogger.addScreenCaptureFromPath(screenShotPath);
             // capture the exception and put inside the report
@@ -90,8 +90,8 @@ public class TestBase {
 
         }
         Thread.sleep(2000);
-       // driver.close();
-      //  Driver.closeDriver();
+        // driver.close();
+        Driver.closeDriver();
     }
 
 }

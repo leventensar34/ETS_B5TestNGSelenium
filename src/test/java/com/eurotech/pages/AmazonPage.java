@@ -21,4 +21,7 @@ public class AmazonPage extends BasePage {
     @FindBy(className = "a-price-whole")
     public List<WebElement> tumFiyatlar;
 
+    @FindBy(css = "[data-component-type='s-search-result']")
+    public List<WebElement> tumUrunler;
+
 }

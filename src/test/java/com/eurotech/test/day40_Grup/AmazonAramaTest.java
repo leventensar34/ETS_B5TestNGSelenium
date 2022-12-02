@@ -22,7 +22,7 @@ public class AmazonAramaTest extends TestBase {
         page.searchBox.sendKeys("car phone holder" + Keys.ENTER);
 
         try {
-            for (WebElement e : page.tumFiyatlar) {
+            for (WebElement e : page.tumUrunler) {
                 WebElement fiyat = e.findElement(By.className("a-price-whole"));
                 System.out.println("fiyat.getText() = " + fiyat.getText());
             }

@@ -71,7 +71,12 @@ public class TestBase {
 
         // driver.get(ConfigurationReader.get("urlToolsQA1"));
         // driver.get(ConfigurationReader.get("url"));
-        driver.get("https://www.saucedemo.com/");
+      //  driver.get("https://www.saucedemo.com/");
+
+         driver.get(ConfigurationReader.get("url3"));
+
+
+
     }
 
     @AfterMethod
@@ -91,7 +96,7 @@ public class TestBase {
         }
         Thread.sleep(2000);
         // driver.close();
-        Driver.closeDriver();
+       // Driver.closeDriver();
     }
 
 }
